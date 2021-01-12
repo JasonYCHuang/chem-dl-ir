@@ -35,18 +35,8 @@ $ sudo apt-get install gcc libxrender1 libxext-dev pkg-config
 $ conda install pytorch torchvision torchaudio cpuonly -c pytorch
 ```
 
-##### TBD
-
 ```
-$ pip install numpy pandas matplotlib scikit-learn scipy Flask
-$ pip install git+https://github.com/ComPlat/nmrglue.git@be0990cf066d9264945747e67e76d24d0b866000
-```
-
-##### >> make sure you are in `chem-dl-ir/training_spectrum_to_fgs`.
-
-
-```
-$ pip install -r requirements.txt
+$ pip install numpy pandas matplotlib scikit-learn scipy Flask git+https://github.com/ComPlat/nmrglue.git@be0990cf066d9264945747e67e76d24d0b866000#egg=nmrglue
 ```
 
 ##### Add conda to jupyter
@@ -58,12 +48,19 @@ $ python -m ipykernel install --user --name=deep-ir-01
 
 # 2. Training and Validation
 
-run following files one-by-one
+1. To get nist data, you should buy it from `https://www.nist.gov/srd/nist-standard-reference-database-35`, and put & rename the folder to `./data/nist/`.
+
+![nist data](https://github.com/JasonYCHuang/chem-dl-ir/blob/master/training_spectrum_to_fgs/assets/nist.jpg)
+
+
+2. run following files one-by-one
 
 
 ```
 01_load_data.ipynb
 02_train_model.ipynb
 03_verify_model_and_save_acc.ipynb
+
+04_count_spectra.ipynb
 ```
 
